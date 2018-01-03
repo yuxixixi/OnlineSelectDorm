@@ -1,73 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#eee"
-    android:orientation="vertical"
-    android:layout_alignParentTop="true">
-    <RelativeLayout
-        android:id="@+id/login_top_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentTop="true">
-        <Button
-            android:id="@+id/login_reback_btn"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="返回"
-            android:onClick="login_back"/>
+    android:gravity="center_vertical"
+    android:stretchColumns="0,3"
+    android:background="@drawable/mainbackground"
+    android:weightSum="1">
+    <TableRow>
+
+    </TableRow>
+    <ImageView
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_weight="0.20" />
+
+    <TableRow>
+        <TextView />
+    </TableRow>
+    <TableRow>
+        <TextView />
+    </TableRow>
+    <TableRow>
+        <TextView />
+    </TableRow>
+
+    <TableRow>
+        <TextView />
         <TextView
+            android:text="账  号："
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="登录"/>
-    </RelativeLayout>
+            android:textSize="15dp"
+            />
         <EditText
             android:id="@+id/login_user_edit"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/login_top_layout"
-            android:textColor="#000"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:singleLine="true"
-            android:hint="请输入"
+            android:textSize="15dp"
+            android:minWidth="220px"/>
+        <TextView />
+    </TableRow>
+    <TableRow android:layout_marginTop="20px">
+        <TextView />
+        <TextView
+            android:text="密  码："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             />
         <EditText
             android:id="@+id/login_pwd_edit"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/login_user_edit"
-            android:layout_marginTop="25dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:password="true"
-            android:hint="密码" />
-        <RelativeLayout
-            android:layout_width="fill_parent"
+            android:minWidth="220px"
+            android:textSize="15dp"
+            android:inputType="textPassword"/>
+        <TextView />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp">
+
+        <TextView />
+
+        <TextView />
+
+        <Button
+            android:id="@+id/login_login_btn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/login_pwd_edit">
-            <Button
-                android:id="@+id/forget_pwd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="23dp"
-                android:layout_marginTop="5dp"
-                android:text="忘记密码？"
-                android:textSize="16sp"
-                android:textColor="#00f"
-                android:background="#0000"
-                android:onClick="forget_pwd"/>
-            <Button
-                android:id="@+id/login_login_btn"
-                android:layout_width="90dp"
-                android:layout_height="40dp"
-                android:layout_marginRight="20dp"
-                android:text="登录"
-                android:background="#441199"
-                android:onClick="login_main"/>
-        </RelativeLayout>
-</RelativeLayout>
+            android:layout_gravity="center"
+            android:text="登录" />
+
+        <TextView />
+    </TableRow>
+</TableLayout>
+
+
